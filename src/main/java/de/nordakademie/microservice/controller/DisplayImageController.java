@@ -11,10 +11,11 @@ public class DisplayImageController {
     @GetMapping(path = "/displayImage")
     public ModelAndView fragment(@RequestParam String url, @RequestParam(required = false) Integer rotate) {
         ModelAndView modelAndView = new ModelAndView("displayImage");
-            System.out.println(rotate);
+
         if(rotate != null && rotate >= 0 && rotate < 360){
             modelAndView.addObject("rotateDeg", rotate + "deg");
         }
+        
         modelAndView.addObject("title", "Display Image");
         modelAndView.addObject("imageUrl", url);
         return modelAndView;
