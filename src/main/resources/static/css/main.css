@@ -2,3 +2,15 @@
 .team_x-headline {
     color: green;
 }
+
+body {
+    width: 100%;
+}
+
+html, body, iframe { height: 100%; }
+
+/* center div team_x-content */
+.team_x-content {
+    margin: 0 auto;
+    width: 100%;
+}

@@ -6,51 +6,25 @@
         <title th:text="${title}"></title>
         <link href="css/main.css" rel="stylesheet" />
     </head>
-    <body>
+    <body class="body">
         <h1 class="team_x-headline" th:text="${title}"></h1>
-        <div id="content">
+        <div th:if="${strategy == 'csi'}" id="content-csi" class="team_x-content"></div>
+
+        <div th:if="${strategy == 'ssi'}" id="content-ssi" class="team_x-content">
             <div>
-                <h4>Navigation</h4>
-                <iframe
-                    class="team_x-iframe"
-                    src="https://nak.matthias-geissendoerfer.de/statuschecker/"
-                    frameborder="1"
-                    width="50%"
-                    height="100%"
-                ></iframe>
+                <div th:utext="${navigationFragment}"></div>
             </div>
             <div>
-                <h4>Aktion</h4>
-                <iframe
-                    class="team_x-iframe"
-                    src="https://nak.matthias-geissendoerfer.de/statuschecker/"
-                    frameborder="1"
-                    width="50%"
-                    height="100%"
-                ></iframe>
+                <div th:utext="${aktionFragment}"></div>
             </div>
             <div>
-                <h4>Artikel</h4>
-                <iframe
-                    class="team_x-iframe"
-                    src="https://nak.matthias-geissendoerfer.de/statuschecker/"
-                    frameborder="1"
-                    width="50%"
-                    height="100%"
-                ></iframe>
+                <div th:utext="${artikelFragment}"></div>
             </div>
             <div>
-                <h4>Footer</h4>
-                <iframe
-                    class="team_x-iframe"
-                    src="https://nak.matthias-geissendoerfer.de/statuschecker/"
-                    frameborder="1"
-                    width="50%"
-                    height="100%"
-                ></iframe>
+                <div th:utext="${footerFragment}"></div>
             </div>
         </div>
 
-        <script src="js/main.js" type="application/javascript"></script>
+        <script src="js/seitenrahmen.js" type="application/javascript"></script>
     </body>
 </html>
