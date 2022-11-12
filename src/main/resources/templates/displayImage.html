@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="de" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title th:text="${title}"></title>
+<link href="css/main.css" rel="stylesheet">
+</head>
+<body>
+
+<h1 class="team_x-headline" th:text="${title}"></h1>
+<img th:src="${imageUrl}" th:style="${ rotateDeg == null ? '' : 'transform:rotate(' + rotateDeg + ')'}"/>
+
+<script src="js/main.js" type="application/javascript"></script>
+</body>
+</html>
